@@ -1,0 +1,36 @@
+Description: Opensource support packages for Nokia N950
+Name: nokia-n950-support
+Requires:
+- bme-rm-680-bin
+- contextkit-plugin-power-bme
+- contextkit-plugin-kbslider 
+- dsme
+- gstreamer0.10-nokia-videosrc
+- gst-omapfb
+- kernel-adaptation-n950
+- n950-camera-fw
+- nokia-n950-configs
+- omap-update-display
+- pulseaudio-module-x11
+- pulseaudio-modules-n900-cmtspeech
+- pulseaudio-modules-n900-mainvolume
+- pulseaudio-modules-n900-music
+- pulseaudio-modules-n900-record
+- pulseaudio-modules-n900-voice
+- pulseaudio-settings-n950
+- systemd-console-ttyS0
+- ti-omap3-sgx-libEGL
+- ti-omap3-sgx-libGLESv1
+- ti-omap3-sgx-libGLESv2
+- ti-wl1271-firmware
+- ti-wl1273-bt-firmware
+- ti-wl1273-fm-radio-firmware
+- udev-rules-n950
+- wl1271-cal-bin
+- xorg-x11-drv-fbdev-sgx
+- xorg-x11-drv-mtev
+Recommends:
+# These packages are not in adaptation repos.
+- policy-settings-basic-n950
+- usb-moded-config-n950-n9
+Summary: Nokia N950 Support

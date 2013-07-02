@@ -1,0 +1,4 @@
+Release: <CI_CNT>.<B_CNT>.Nemo.Adaptation.N950.N9
+
+Prefer: ti-omap3-sgx-libEGL
+Prefer: ti-omap3-sgx-wayland-wsegl
