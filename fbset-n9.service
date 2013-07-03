@@ -1,0 +1,13 @@
+[Unit]
+Description=Set device to 32bpp
+Requires=ti-omap3-sgx.service
+Before=ti-omap3-sgx.service
+ConditionPathExists=/usr/sbin/fbset
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/usr/sbin/fbset -depth 32 -rgba 8/16,8/8,8/0,8/24
+
+[Install]
+WantedBy=basic.target

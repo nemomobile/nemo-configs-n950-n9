@@ -31,6 +31,7 @@ Summary:    Project configs for n950/n9 hw repos for OBS
 %package wayland
 Summary:    Repository patterns for n950/n9 hw
 Provides:   ti-omap3-sgx-configs
+Requires:   fbset
 
 %description wayland
 %{summary}.
@@ -44,6 +45,8 @@ make
 %install
 rm -rf %{buildroot}
 make DESTDIR=%{buildroot} ONESHOTDIR=%{_oneshotdir} install
+mkdir -p $RPM_BUILD_ROOT/lib/systemd/system/basic.target.wants/
+ln -s ../fbset-n9.service $RPM_BUILD_ROOT/lib/systemd/system/basic.target.wants/fbset-n9.service
 /usr/bin/repomd-pattern-builder.py --patternxml -p ./patterns/ -o %{buildroot}/usr/share/package-groups/ --version=%{version} --release=%{release}
 
 %files
@@ -60,3 +63,5 @@ make DESTDIR=%{buildroot} ONESHOTDIR=%{_oneshotdir} install
 %files wayland
 %{_sysconfdir}/powervr.ini
 /var/lib/environment/compositor/60-n9-n950-ui.conf
+/lib/systemd/system/basic.target.wants/fbset-n9.service
+/lib/systemd/system/fbset-n9.service
