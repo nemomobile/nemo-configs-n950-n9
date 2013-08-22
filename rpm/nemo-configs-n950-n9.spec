@@ -63,5 +63,6 @@ ln -s ../fbset-n9.service $RPM_BUILD_ROOT/lib/systemd/system/basic.target.wants/
 %files wayland
 %{_sysconfdir}/powervr.ini
 /var/lib/environment/compositor/60-n9-n950-ui.conf
+/var/lib/environment/nemo/61-nemo-mobile-hw-wayland.conf
 /lib/systemd/system/basic.target.wants/fbset-n9.service
 /lib/systemd/system/fbset-n9.service
