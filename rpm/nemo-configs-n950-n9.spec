@@ -29,7 +29,9 @@ Summary:    Project configs for n950/n9 hw repos for OBS
 %{summary}.
 
 %package wayland
-Summary:    Repository patterns for n950/n9 hw
+Summary:    Configuration files for n950/n9 wayland env
+Obsoletes:  ti-omap3-sgx-configs-default <= 1.4.268.5
+Provides:   ti-omap3-sgx-configs-default > 1.4.268.5
 Provides:   ti-omap3-sgx-configs
 Requires:   fbset
 
