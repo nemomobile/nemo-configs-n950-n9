@@ -33,7 +33,7 @@ Summary:    Configuration files for n950/n9 wayland env
 Obsoletes:  ti-omap3-sgx-configs-default <= 1.4.268.5
 Provides:   ti-omap3-sgx-configs-default > 1.4.268.5
 Provides:   ti-omap3-sgx-configs
-Requires:   fbset
+Requires:   kernel-adaptation-n950 >= 3.5.3.20141025.1
 
 %description wayland
 %{summary}.
@@ -48,7 +48,6 @@ make
 rm -rf %{buildroot}
 make DESTDIR=%{buildroot} ONESHOTDIR=%{_oneshotdir} install
 mkdir -p $RPM_BUILD_ROOT/lib/systemd/system/basic.target.wants/
-ln -s ../fbset-n9.service $RPM_BUILD_ROOT/lib/systemd/system/basic.target.wants/fbset-n9.service
 /usr/bin/repomd-pattern-builder.py --patternxml -p ./patterns/ -o %{buildroot}/usr/share/package-groups/ --version=%{version} --release=%{release}
 
 %files
@@ -66,5 +65,3 @@ ln -s ../fbset-n9.service $RPM_BUILD_ROOT/lib/systemd/system/basic.target.wants/
 %{_sysconfdir}/powervr.ini
 /var/lib/environment/compositor/60-n9-n950-ui.conf
 /var/lib/environment/nemo/61-nemo-mobile-hw-wayland.conf
-/lib/systemd/system/basic.target.wants/fbset-n9.service
-/lib/systemd/system/fbset-n9.service
