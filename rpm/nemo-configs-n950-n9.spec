@@ -52,6 +52,7 @@ mkdir -p $RPM_BUILD_ROOT/lib/systemd/system/basic.target.wants/
 
 %files
 %defattr(-,root,root,-)
+/var/lib/environment/ofono/plugins.conf
 
 %files -n n950-n9-patterns
 %defattr(-,root,root,-)
