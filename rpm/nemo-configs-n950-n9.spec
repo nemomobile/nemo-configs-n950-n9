@@ -33,7 +33,7 @@ Summary:    Configuration files for n950/n9 wayland env
 Obsoletes:  ti-omap3-sgx-configs-default <= 1.4.268.5
 Provides:   ti-omap3-sgx-configs-default > 1.4.268.5
 Provides:   ti-omap3-sgx-configs
-Requires:   kernel-adaptation-n950 >= 3.5.3.20141025.1
+Requires:   kernel-adaptation-n950 >= 3.5.3.20141127.1
 
 %description wayland
 %{summary}.
