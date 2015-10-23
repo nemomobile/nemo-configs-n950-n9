@@ -1,7 +1,0 @@
-Description: Pattern to include Nemo with N950 support
-Name: nemo-n950
-Requires:
-- pattern:nemo-complete
-- pattern:nokia-n950-support
-- meego-handset-camera
-Summary: Nemo N950
